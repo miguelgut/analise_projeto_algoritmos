@@ -20,16 +20,10 @@ def mochilaBooleana(W, wt, val):
  
     return K[n][W]
 
-def mochilaPequena():
-    return [[60, 100, 120], [10,20,30]]
-
-def mochilaGrande():
-    return [[60, 100, 120, 500, 200, 30, 50, 600, 100], [10, 20,  30,  50,  10,  10, 20, 15,  10]]
-
 def testeMochilaPequena():
     print("----------- Iniciando rotina com mochila de tamanho pequeno --------------") 
     W = 50
-    val, wt = mochilaPequena()
+    val, wt = utils.mochilaPequena()
     start = utils.getTime()
     result = mochilaBooleana(W, wt, val)
     end = utils.getTime()
@@ -39,7 +33,7 @@ def testeMochilaPequena():
 def testeMochilaGrande():
     print("----------- Iniciando rotina com mochila de tamanho grande --------------")
     W = 50
-    val, wt = mochilaGrande()    
+    val, wt = utils.mochilaGrande()    
     start = utils.getTime()
     result = mochilaBooleana(W, wt, val)
     end = utils.getTime()
